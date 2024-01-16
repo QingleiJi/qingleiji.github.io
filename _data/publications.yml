@@ -1,0 +1,30 @@
+main:
+
+  - title: Design and calibration of 3D printed soft deformation sensors for soft actuator control
+    authors: <strong>Qinglei Ji</strong>, Jakob Jansson, Mikael Sjöberg, Xi Vincent Wang, Lihui Wang, Lei Feng∗
+    year: 2023
+    conference: Mechatronics
+    link: https://www.sciencedirect.com/science/article/pii/S0957415823000363
+    image: ./assets/img/Mech.png
+
+  - title: Synthesizing the optimal gait of a quadruped robot with soft actuators using deep reinforcement learning
+    authors: <strong>Qinglei Ji</strong>, Shuo Fu, Kaige Tan, Seshagopalan Thorapalli Muralidharan, Karin Lagrelius, David Danelia, Georgios Andrikopoulos, Xi Vincent Wang, Lihui Wang, Lei Feng*
+    year: 2022
+    conference: Robotics and Computer-Integrated Manufacturing
+    link: https://www.sciencedirect.com/science/article/pii/S0736584522000692
+    image: ./assets/img/RCIM.png
+
+  - title: Feedback control for the precise shape morphing of 4D-printed shape memory polymer
+    authors: Qinglei Ji, Mo Chen, Chun Zhao, Xiran Zhang, Xi Vincent Wang, Lihui Wang, Lei Feng*
+    year: 2020
+    conference:  IEEE Transactions on Industrial Electronics
+    link: https://ieeexplore.ieee.org/abstract/document/9280377
+    image: ./assets/img/TIE.png
+
+  - title: An integrated micro-millifluidic processing system
+    authors: Jia Ming Zhang‡, <strong>Qinglei Ji‡</strong>, Ying Liu, Jianyong Huang, Huiling Duan*
+    year: 2018
+    conference:  Lab on a Chip
+    link: https://pubs.rsc.org/en/content/articlelanding/2018/lc/c8lc00636a/unauth
+    notes: back cover article
+    image: ./assets/img/LoC.png
