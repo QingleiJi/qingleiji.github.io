@@ -8,9 +8,10 @@ Currently, I am employed as a Solution Engineer specializing in System Resilienc
 I received the Ph.D. degree in Robotics, Control & Artificial Intelligence from the KTH Royal Institute of Technology, Stockholm, Sweden, in 2022. Before that, I received the M.Sc. degree from the Ecole Nationale Supérieure de Mécanique et d’Aérotechnique, Poitiers, France, in 2018, and the B.Eng. degree from the Nanjing University of Aeronautics and Astronautics, Nanjing, China, in 2015, both in Aerospace Engineering.
 
 ## Interests
-- **Artificial Intelligence:** reinforcement learning, AI safety, automated driving systems
-- **Systems Engineering:** model-based systems engineering
-- **Automation:** model, intelligent control, simulation, robotics, sensors, actuators
+- **Artificial Intelligence:** Reinforcement learning, AI safety, and their applications in automated driving systems.
+- **Mechatronics:** Intelligent control, simulation, robotics, sensors, and actuators.
+- **Systems Engineering:** Model-based systems engineering.
+
 
 ## News
 
