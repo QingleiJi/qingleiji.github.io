@@ -17,3 +17,7 @@ This project is open source, under the [MIT license](LICENSE).
 ## Contact
 
 If you have any questions or comments, please feel free to [contact me](mailto:qinglei.ji.acad@gmail.com).
+
+## Useful commands
+Build your website: jekyll build
+Test your website locally: jekyll serve
