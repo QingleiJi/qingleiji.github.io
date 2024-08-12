@@ -1,5 +1,12 @@
 main:
 
+  - title: Closed-loop 4D printing of autonomous soft robots
+    authors: <strong>Qinglei Ji*</strong>, Danilo Neves, Lei Feng, Chun Zhao
+    year: 2024
+    conference: 4D-Printed Robotic Materials, Sensors, and Actuators
+    link: https://shop.elsevier.com/books/smart-materials-in-additive-manufacturing-volume-3/zolfagharian/978-0-443-13673-3
+    image: ./assets/img/CLSR_book.png
+
   - title: Design and calibration of 3D printed soft deformation sensors for soft actuator control
     authors: <strong>Qinglei Ji</strong>, Jakob Jansson, Mikael Sjöberg, Xi Vincent Wang, Lihui Wang, Lei Feng∗
     year: 2023
