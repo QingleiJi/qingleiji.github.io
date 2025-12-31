@@ -30,6 +30,18 @@ if ($LASTEXITCODE -ne 0) {
     throw "Jekyll build failed. Check build.log for details."
 }
 
+# Integrate external '2026' project as a subpage
+$pythonProjectSource = "C:\Users\Qingl\OneDrive\Projects\Python\2026"
+$pythonProjectDest = "_site\2026"
+
+if (Test-Path -Path $pythonProjectSource) {
+    Write-Host "Copying external '2026' project to _site/2026..."
+    if (-not (Test-Path -Path $pythonProjectDest)) {
+        New-Item -ItemType Directory -Force -Path $pythonProjectDest | Out-Null
+    }
+    Copy-Item -Path "$pythonProjectSource\*" -Destination $pythonProjectDest -Recurse -Force
+}
+
 # Check if the target directory exists, if not, create it
 if (-not (Test-Path -Path $targetDir -PathType Container)) {
     Write-Host "Target directory does not exist. Creating it..."
