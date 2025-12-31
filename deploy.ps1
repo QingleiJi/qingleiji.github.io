@@ -7,6 +7,13 @@ param (
 # Clear the console
 Clear-Host
 
+# Ensure the script runs from the directory where it is located (project root)
+Set-Location -Path $PSScriptRoot
+
+if (-not (Test-Path "Gemfile")) {
+    throw "Gemfile not found in '$PSScriptRoot'. Please ensure this script is located in the Jekyll project root."
+}
+
 # IMPORTANT: Define the target directory for deployment.
 # This is the local path to your GitHub Pages repository (e.g., your-username.github.io).
 # PLEASE UPDATE THIS PATH to your actual repository location.
@@ -41,13 +48,31 @@ Set-Location -Path $targetDir
 Write-Host "Now in $(Get-Location)"
 git status
 
-# Stage all changes
-git add .
+# Ask the user if they want to commit and push
+$answer = Read-Host "Do you want to commit and push changes? (yes/y/no/n)"
+$answer = $answer.ToLower()
 
-# Commit the changes with the provided message
-git commit -m "$commitMessage"
+if ($answer -eq "yes" -or $answer -eq "y") {
+    $inputMessage = Read-Host "Enter commit message (Press Enter to use '$commitMessage')"
+    if (-not [string]::IsNullOrWhiteSpace($inputMessage)) {
+        $commitMessage = $inputMessage
+    }
 
-# Push the changes
-git push
+    # Stage all changes
+    git add .
 
-Write-Host "Changes have been committed and pushed successfully."
+    # Commit the changes with the provided message
+    git commit -m "$commitMessage"
+
+    # Push the changes
+    git push
+
+    Write-Host "Changes have been committed and pushed successfully."
+}
+elseif ($answer -eq "no" -or $answer -eq "n") {
+    Write-Host "No changes committed or pushed. Exiting."
+}
+else {
+    Write-Host "Invalid input. Please enter yes/y or no/n."
+    exit 1
+}
