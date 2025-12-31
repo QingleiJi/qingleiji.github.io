@@ -1,0 +1,53 @@
+# PowerShell Deployment Script for Jekyll
+
+param (
+    [string]$commitMessage = "Auto-deploy"
+)
+
+# Clear the console
+Clear-Host
+
+# IMPORTANT: Define the target directory for deployment.
+# This is the local path to your GitHub Pages repository (e.g., your-username.github.io).
+# PLEASE UPDATE THIS PATH to your actual repository location.
+$targetDir = "C:\Users\Qingl\OneDrive\Projects\Github\qingleiji.github.io"
+
+# Ensure the script exits on any error
+$ErrorActionPreference = "Stop"
+
+# Run Jekyll build using bundle exec
+Write-Host "Building Jekyll site..."
+cmd /c "bundle exec jekyll build --verbose > build.log 2>&1"
+if ($LASTEXITCODE -ne 0) {
+    Get-Content "build.log" | Write-Host
+    throw "Jekyll build failed. Check build.log for details."
+}
+
+# Check if the target directory exists, if not, create it
+if (-not (Test-Path -Path $targetDir -PathType Container)) {
+    Write-Host "Target directory does not exist. Creating it..."
+    New-Item -ItemType Directory -Force -Path $targetDir
+}
+
+# Copy the contents of the _site folder to the target directory
+Write-Host "Copying files to target directory..."
+Copy-Item -Path "_site\*" -Destination $targetDir -Recurse -Force
+
+Write-Host "Deployment complete!"
+
+# Change directory to the target repository
+Set-Location -Path $targetDir
+
+Write-Host "Now in $(Get-Location)"
+git status
+
+# Stage all changes
+git add .
+
+# Commit the changes with the provided message
+git commit -m "$commitMessage"
+
+# Push the changes
+git push
+
+Write-Host "Changes have been committed and pushed successfully."
