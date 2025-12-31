@@ -1,7 +1,7 @@
 const canvas = document.getElementById('fireworksCanvas');
 const ctx = canvas.getContext('2d');
-const countdownEl = document.getElementById('countdown');
 const newYearMessageEl = document.getElementById('newYearMessage');
+const subtitleEl = document.getElementById('subtitle');
 
 let width = canvas.width = window.innerWidth;
 let height = canvas.height = window.innerHeight;
@@ -14,7 +14,7 @@ window.addEventListener('resize', () => {
 const gravity = 0.05;
 let fireworks = [];
 let particles = [];
-let isNewYear = false;
+const scandinavianColors = ['#FFD700', '#C0C0C0', '#FFFFFF'];
 
 // --- Helper Functions ---
 function random(min, max) {
@@ -57,7 +57,7 @@ class Firework {
         this.x = random(width * 0.2, width * 0.8);
         this.y = height;
         this.targetY = random(height * 0.1, height * 0.4);
-        this.color = `hsl(${random(0, 360)}, 100%, 50%)`;
+        this.color = scandinavianColors[Math.floor(Math.random() * scandinavianColors.length)];
         this.velocity = { x: 0, y: -random(4, 7) };
         this.trail = [];
     }
@@ -111,34 +111,19 @@ class Firework {
     }
 }
 
-// --- Countdown Logic ---
-let countdownNumber = 10;
-countdownEl.textContent = countdownNumber;
-
-const countdownTimer = setInterval(() => {
-    countdownNumber--;
-    if (countdownNumber > 0) {
-        countdownEl.textContent = countdownNumber;
-    } else if (countdownNumber === 0) {
-         countdownEl.textContent = "🎉"; // Fun emoji just before message
-    } else {
-        countdownEl.style.display = 'none';
-        newYearMessageEl.textContent = 'Happy New Year 2026!';
-        newYearMessageEl.style.display = 'block';
-        isNewYear = true;
-        clearInterval(countdownTimer);
-    }
-}, 1000);
+subtitleEl.textContent = 'Wishing you a wonderful';
+newYearMessageEl.textContent = '2026';
+newYearMessageEl.style.display = 'block';
 
 
 // --- Animation Loop ---
 function animate() {
     requestAnimationFrame(animate);
-    ctx.fillStyle = 'rgba(0, 0, 0, 0.1)'; // Creates a fading trail effect
+    ctx.fillStyle = 'rgba(245, 245, 245, 0.1)'; // Creates a fading trail effect
     ctx.fillRect(0, 0, width, height);
 
-    // Launch fireworks periodically after New Year
-    if (isNewYear && Math.random() < 0.05) {
+    // Launch fireworks periodically
+    if (Math.random() < 0.05) {
         fireworks.push(new Firework());
     }
 
@@ -159,6 +144,6 @@ function animate() {
     }
 }
 
-// Initial firework for countdown
+// Initial firework
 fireworks.push(new Firework());
 animate();
