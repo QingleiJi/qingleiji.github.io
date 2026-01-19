@@ -82,9 +82,38 @@ if ($answer -eq "yes" -or $answer -eq "y") {
     Write-Host "Changes have been committed and pushed successfully."
 }
 elseif ($answer -eq "no" -or $answer -eq "n") {
-    Write-Host "No changes committed or pushed. Exiting."
+    Write-Host "Skipped committing and pushing changes to qingleiji.github.io."
 }
 else {
     Write-Host "Invalid input. Please enter yes/y or no/n."
-    exit 1
+}
+
+# Ask user if they want to back up the source code
+$backupAnswer = Read-Host "Do you want to back up the 'Personal' source files? (yes/y/no/n)"
+$backupAnswer = $backupAnswer.ToLower()
+
+if ($backupAnswer -eq "yes" -or $backupAnswer -eq "y") {
+    Write-Host "Backing up 'Personal' source files..."
+    Set-Location -Path $PSScriptRoot
+    
+    Write-Host "Now in $(Get-Location)"
+    git status
+
+    $backupCommitMessage = "Backup source files"
+    $inputBackupMessage = Read-Host "Enter backup commit message (Press Enter to use '$backupCommitMessage')"
+    if (-not [string]::IsNullOrWhiteSpace($inputBackupMessage)) {
+        $backupCommitMessage = $inputBackupMessage
+    }
+
+    git add .
+    git commit -m "$backupCommitMessage"
+    git push
+
+    Write-Host "Source files have been backed up successfully."
+}
+elseif ($backupAnswer -eq "no" -or $backupAnswer -eq "n") {
+    Write-Host "Source files not backed up."
+}
+else {
+    Write-Host "Invalid input. Please enter yes/y or no/n."
 }
