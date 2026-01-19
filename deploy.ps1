@@ -14,35 +14,77 @@ Set-Location -Path $PSScriptRoot
 $ErrorActionPreference = "Stop"
 
 try {
-    # Build the Tracker-PWA project
-    Write-Host "Building Tracker-PWA project..."
+    # --- New Tracker-PWA Backup ---
     $trackerProjectDir = "..\Tracker-PWA"
     if (Test-Path -Path $trackerProjectDir) {
-        Push-Location $trackerProjectDir
-        Write-Host "Running 'npm run build' in $(Get-Location)..."
-        npm run build
-        if ($LASTEXITCODE -ne 0) {
-            throw "Tracker-PWA build failed."
+        $trackerBackupAnswer = Read-Host "Do you want to back up the 'Tracker-PWA' source files? (yes/y/no/n)"
+        $trackerBackupAnswer = $trackerBackupAnswer.ToLower()
+
+        if ($trackerBackupAnswer -eq "yes" -or $trackerBackupAnswer -eq "y") {
+            Write-Host "Backing up 'Tracker-PWA' source files..."
+            Push-Location $trackerProjectDir
+            
+            Write-Host "Now in $(Get-Location)"
+            git status
+
+            $trackerCommitMessage = "Backup Tracker-PWA source"
+            $inputTrackerMessage = Read-Host "Enter backup commit message (Press Enter to use '$trackerCommitMessage')"
+            if (-not [string]::IsNullOrWhiteSpace($inputTrackerMessage)) {
+                $trackerCommitMessage = $inputTrackerMessage
+            }
+
+            git add .
+            git commit -m "$trackerCommitMessage"
+            git push
+
+            Write-Host "Tracker-PWA source files have been backed up successfully."
+            Pop-Location
         }
-        Pop-Location
-        Write-Host "Tracker-PWA build complete."
-    } else {
-        Write-Host "Warning: Tracker-PWA project directory not found at $trackerProjectDir. Skipping build."
+        elseif ($trackerBackupAnswer -eq "no" -or $trackerBackupAnswer -eq "n") {
+            Write-Host "Skipped backing up Tracker-PWA source files."
+        }
+        else {
+            Write-Host "Invalid input. Skipping Tracker-PWA backup."
+        }
     }
 
-    # Copy the Tracker PWA build to the tracker folder
-    Write-Host "Copying Tracker-PWA build..."
-    $trackerSource = "..\Tracker-PWA\dist"
-    $trackerDest = ".\tracker"
+    # --- New Conditional Rebuild ---
+    $rebuildAnswer = Read-Host "Do you want to rebuild the 'Tracker-PWA' app? (yes/y/no/n)"
+    $rebuildAnswer = $rebuildAnswer.ToLower()
 
-    if (Test-Path -Path $trackerSource) {
-        if (-not (Test-Path -Path $trackerDest)) {
-            New-Item -ItemType Directory -Force -Path $trackerDest | Out-Null
+    if ($rebuildAnswer -eq "yes" -or $rebuildAnswer -eq "y") {
+        # Build the Tracker-PWA project
+        Write-Host "Building Tracker-PWA project..."
+        if (Test-Path -Path $trackerProjectDir) {
+            Push-Location $trackerProjectDir
+            Write-Host "Running 'npm run build' in $(Get-Location)..."
+            npm run build
+            if ($LASTEXITCODE -ne 0) {
+                throw "Tracker-PWA build failed."
+            }
+            Pop-Location
+            Write-Host "Tracker-PWA build complete."
+        } else {
+            Write-Host "Warning: Tracker-PWA project directory not found at $trackerProjectDir. Skipping build."
         }
-        Copy-Item -Path "$trackerSource\*" -Destination $trackerDest -Recurse -Force
-        Write-Host "Tracker-PWA build copied successfully."
-    } else {
-        Write-Host "Warning: Tracker-PWA source directory not found at $trackerSource. Skipping copy."
+
+        # Copy the Tracker PWA build to the tracker folder
+        Write-Host "Copying Tracker-PWA build..."
+        $trackerSource = "..\Tracker-PWA\dist"
+        $trackerDest = ".\tracker"
+
+        if (Test-Path -Path $trackerSource) {
+            if (-not (Test-Path -Path $trackerDest)) {
+                New-Item -ItemType Directory -Force -Path $trackerDest | Out-Null
+            }
+            Copy-Item -Path "$trackerSource\*" -Destination $trackerDest -Recurse -Force
+            Write-Host "Tracker-PWA build copied successfully."
+        } else {
+            Write-Host "Warning: Tracker-PWA source directory not found at $trackerSource. Skipping copy."
+        }
+    }
+    else {
+        Write-Host "Skipping rebuild and copy of Tracker-PWA."
     }
 
     if (-not (Test-Path "Gemfile")) {
