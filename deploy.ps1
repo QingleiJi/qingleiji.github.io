@@ -10,6 +10,21 @@ Clear-Host
 # Ensure the script runs from the directory where it is located (project root)
 Set-Location -Path $PSScriptRoot
 
+# Copy the Tracker PWA build to the tracker folder
+Write-Host "Copying Tracker-PWA build..."
+$trackerSource = "..\Tracker-PWA\dist"
+$trackerDest = ".\tracker"
+
+if (Test-Path -Path $trackerSource) {
+    if (-not (Test-Path -Path $trackerDest)) {
+        New-Item -ItemType Directory -Force -Path $trackerDest | Out-Null
+    }
+    Copy-Item -Path "$trackerSource\*" -Destination $trackerDest -Recurse -Force
+    Write-Host "Tracker-PWA build copied successfully."
+} else {
+    Write-Host "Warning: Tracker-PWA source directory not found at $trackerSource. Skipping copy."
+}
+
 if (-not (Test-Path "Gemfile")) {
     throw "Gemfile not found in '$PSScriptRoot'. Please ensure this script is located in the Jekyll project root."
 }
