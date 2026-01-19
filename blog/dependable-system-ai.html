@@ -1,0 +1,689 @@
+<!doctype html>
+
+<html class="no-js" lang="en">
+
+<head>
+	<!-- Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-WJRLX44VRY"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-WJRLX44VRY');
+	</script>
+	<!-- End Google Analytics -->
+	
+
+	<!-- MathJax configuration and script -->
+	<script>
+	MathJax = {
+		tex: {
+		inlineMath: [['$', '$'], ['\\(', '\\)']],
+		displayMath: [['$$', '$$'], ['\\[', '\\]']]
+		}
+	};
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+
+
+	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+	Qinglei Ji
+
+	Personal Theme by https://jekyllthemes.io
+	Premium + free Jekyll themes for your blog or website.
+
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<!-- Page Info -->
+	<link rel="shortcut icon" href="/images/favicon.svg">
+	<title>Challenges to System Dependability in the Era of AI</title>
+	<meta name="description" content="What is system dependability and why AI makes it harder.">
+
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Challenges to System Dependability in the Era of AI – Qinglei Ji">
+	<meta name="twitter:description" content="What is system dependability and why AI makes it harder.">
+	<meta name="twitter:image:src" content="/images/sys-depend-AI.png">
+
+	<!-- Facebook OpenGraph -->
+	<meta property="og:title" content="Challenges to System Dependability in the Era of AI – Qinglei Ji" />
+	<meta property="og:description" content="What is system dependability and why AI makes it harder." />
+	<meta property="og:image" content="/images/sys-depend-AI.png" />
+
+	
+	<!-- Font Embed Code -->
+	<link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet">
+	
+
+	<!-- Styles -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<!-- Icons -->
+	<script defer src="https://use.fontawesome.com/releases/v5.1.1/js/solid.js" integrity="sha384-GXi56ipjsBwAe6v5X4xSrVNXGOmpdJYZEEh/0/GqJ3JTHsfDsF8v0YQvZCJYAiGu" crossorigin="anonymous"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.1.1/js/brands.js" integrity="sha384-0inRy4HkP0hJ038ZyfQ4vLl+F4POKbqnaUB6ewmU4dWP0ki8Q27A0VFiVRIpscvL" crossorigin="anonymous"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.1.1/js/fontawesome.js" integrity="sha384-NY6PHjYLP2f+gL3uaVfqUZImmw71ArL9+Roi9o+I4+RBqArA2CfW1sJ1wkABFfPe" crossorigin="anonymous"></script>
+
+	
+	<!-- Custom Styles -->
+	<style></style>
+	
+
+	
+	<!-- Analytics Code -->
+	
+	
+
+	
+	<!-- Extra Header JS Code -->
+	
+	
+	
+</head>
+
+
+<body class="loading ajax-loading" data-site-url="" data-page-url="/blog/dependable-system-ai">
+
+
+	<header class="header">
+
+	<div class="wrap">
+
+		
+		<a href="/" class="header__title">
+			Qinglei Ji
+		</a>
+		
+
+		<div class="menu">
+			<div class="menu__toggle js-menu-toggle">
+				<div class="menu__toggle__icon"><span></span></div>
+			</div>
+			<div class="menu__wrap">
+				<ul class="menu__list">
+					
+					<li class="menu__list__item">
+						<a href="/" class="menu__list__item__link">About</a>
+					</li>
+					
+					<li class="menu__list__item">
+						<a href="/projects" class="menu__list__item__link">Projects</a>
+					</li>
+					
+					<li class="menu__list__item">
+						<a href="/blog/" class="menu__list__item__link">Blog</a>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+
+	</div>
+
+</header>
+
+
+	<div class="loader"><svg width="120" height="30" viewBox="0 0 120 30" xmlns="http://www.w3.org/2000/svg"><circle cx="15" cy="15" r="15"><animate attributeName="r" from="15" to="15" begin="0s" dur="0.8s" values="15;9;15" calcMode="linear" repeatCount="indefinite" /><animate attributeName="fill-opacity" from="1" to="1" begin="0s" dur="0.8s" values="1;.5;1" calcMode="linear" repeatCount="indefinite" /></circle><circle cx="60" cy="15" r="9" fill-opacity="0.3"><animate attributeName="r" from="9" to="9" begin="0s" dur="0.8s" values="9;15;9" calcMode="linear" repeatCount="indefinite" /><animate attributeName="fill-opacity" from="0.5" to="0.5" begin="0s" dur="0.8s" values=".5;1;.5" calcMode="linear" repeatCount="indefinite" /></circle><circle cx="105" cy="15" r="15"><animate attributeName="r" from="15" to="15" begin="0s" dur="0.8s" values="15;9;15" calcMode="linear" repeatCount="indefinite" /><animate attributeName="fill-opacity" from="1" to="1" begin="0s" dur="0.8s" values="1;.5;1" calcMode="linear" repeatCount="indefinite" /></circle></svg></div>
+
+	<div class="page-loader"></div>
+
+	
+	<div class="page">
+
+		<div class="page__content" data-page-title="Qinglei Ji">
+
+			<section class="hero hero--single">
+
+	<div class="hero__image" style="background-image: url(/images/sys-depend-AI.png)">
+		<div class="hero__overlay"></div>
+	</div>
+
+	<div class="wrap">
+
+		<h1>Challenges to System Dependability in the Era of AI</h1>
+		<p>27 July 2025</p>
+
+	</div>
+
+</section>
+
+<section class="single">
+
+	<div class="wrap">
+
+		<article class="single-post">
+
+			<h1 id="challenges-to-system-dependability-in-the-era-of-ai">Challenges to System Dependability in the Era of AI</h1>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>System dependability represents the cornerstone of modern technological infrastructure, encompassing the fundamental requirement that computing systems perform reliably and trustworthily under all operating conditions<sup id="fnref:Avizienis"><a href="#fn:Avizienis" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>. As artificial intelligence increasingly permeates critical systems across domains ranging from autonomous transportation to healthcare diagnostics, the traditional frameworks for ensuring system dependability face unprecedented challenges<sup id="fnref:2"><a href="#fn:2" class="footnote" rel="footnote" role="doc-noteref">2</a></sup><sup id="fnref:3"><a href="#fn:3" class="footnote" rel="footnote" role="doc-noteref">3</a></sup>. The integration of AI technologies introduces new dimensions of complexity that fundamentally alter how we conceptualize, design, and maintain dependable systems<sup id="fnref:4"><a href="#fn:4" class="footnote" rel="footnote" role="doc-noteref">4</a></sup>.</p>
+
+<p>The emergence of AI as a dominant technological force has created a paradigm shift in system architecture and behavior<sup id="fnref:5"><a href="#fn:5" class="footnote" rel="footnote" role="doc-noteref">5</a></sup>. Unlike conventional deterministic systems where outputs are predictable given specific inputs, AI systems exhibit emergent behaviors that can be difficult to predict, verify, or control<sup id="fnref:6"><a href="#fn:6" class="footnote" rel="footnote" role="doc-noteref">6</a></sup><sup id="fnref:7"><a href="#fn:7" class="footnote" rel="footnote" role="doc-noteref">7</a></sup>. This transformation necessitates a comprehensive reexamination of dependability principles and the development of new methodologies to address the unique challenges posed by intelligent systems<sup id="fnref:8"><a href="#fn:8" class="footnote" rel="footnote" role="doc-noteref">8</a></sup><sup id="fnref:9"><a href="#fn:9" class="footnote" rel="footnote" role="doc-noteref">9</a></sup>.</p>
+
+<h2 id="understanding-system-dependability">Understanding System Dependability</h2>
+
+<p>System dependability encompasses multiple interconnected attributes that collectively define the trustworthiness of a computing system<sup id="fnref:10"><a href="#fn:10" class="footnote" rel="footnote" role="doc-noteref">10</a></sup>. These attributes form a comprehensive framework for evaluating system performance across various dimensions of reliability and security<sup id="fnref:11"><a href="#fn:11" class="footnote" rel="footnote" role="doc-noteref">11</a></sup>. The traditional dependability framework, established through decades of research and practical application, provides the foundation for understanding how systems can be designed and operated to meet critical requirements<sup id="fnref:12"><a href="#fn:12" class="footnote" rel="footnote" role="doc-noteref">12</a></sup>.</p>
+
+<p>The concept of dependability emerged from the recognition that modern society increasingly relies on computing systems for essential functions<sup id="fnref:13"><a href="#fn:13" class="footnote" rel="footnote" role="doc-noteref">13</a></sup>. From power grid management to financial transaction processing, the consequences of system failures extend far beyond mere inconvenience, potentially affecting public safety, economic stability, and social infrastructure<sup id="fnref:14"><a href="#fn:14" class="footnote" rel="footnote" role="doc-noteref">14</a></sup>. Therefore, dependability represents not merely a technical consideration but a societal imperative that requires systematic analysis and continuous improvement<sup id="fnref:15"><a href="#fn:15" class="footnote" rel="footnote" role="doc-noteref">15</a></sup>.</p>
+
+<h2 id="core-aspects-of-system-dependability">Core Aspects of System Dependability</h2>
+
+<h3 id="reliability">Reliability</h3>
+
+<p>Reliability constitutes the probability that a system will perform its intended function without failure over a specified period under stated conditions. This attribute focuses on the system’s ability to maintain consistent performance throughout its operational lifetime. Reliability encompasses both hardware and software components, requiring careful consideration of component failure rates, system architecture, and maintenance strategies.</p>
+
+<p>In traditional systems, reliability analysis relies heavily on statistical models and historical failure data<sup id="fnref:16"><a href="#fn:16" class="footnote" rel="footnote" role="doc-noteref">16</a></sup>. Engineers employ techniques such as fault tree analysis and Markov models to predict system behavior and identify potential failure modes. For example, in aerospace applications, aircraft control systems undergo extensive reliability analysis to ensure they meet stringent safety requirements. The Boeing 777’s fly-by-wire system incorporates triple redundancy with majority voting to achieve the required reliability levels for commercial aviation<sup id="fnref:17"><a href="#fn:17" class="footnote" rel="footnote" role="doc-noteref">17</a></sup>.</p>
+
+<p>The measurement of reliability typically involves several key quantitative metrics. Mean Time Between Failures (MTBF) represents the expected time interval between consecutive failures during steady-state operation, calculated as MTBF = Total Operating Time / Number of Failures. Mean Time To Repair (MTTR) quantifies the expected time required to restore system functionality after a failure occurs, encompassing detection, diagnosis, and restoration activities. The reliability function $R(t) = e^{-λt}$ describes the probability that a system will operate without failure for time t, where λ represents the constant failure rate. The failure rate $λ(t) = f(t) / R(t)$ indicates the instantaneous rate of failure at time $t$, where f(t) is the probability density function of failure times.</p>
+
+<p>Availability, closely related to reliability, can be expressed as $A = MTBF / (MTBF + MTTR)$, providing a steady-state measure of system operational readiness. For systems with multiple components, reliability calculations become more complex, requiring consideration of series configurations $R_{system} = ∏R_i$ for components that must all function, and parallel configurations $R_{system} = 1 - ∏(1 - R_i)$ for redundant components where only one needs to function.</p>
+
+<p>These quantitative frameworks enable engineers to compare different design alternatives, establish maintenance schedules, and make informed decisions about system architecture. Reliability engineering also encompasses preventive maintenance strategies, component selection criteria, and system monitoring approaches that collectively contribute to sustained reliable operation.</p>
+
+<h3 id="availability">Availability</h3>
+
+<p>Availability represents the degree to which a system remains operational and accessible when required for use. This attribute combines reliability with maintainability, recognizing that even reliable systems require periodic maintenance and may experience occasional failures. Availability is typically expressed as a percentage, with high-availability systems achieving 99.9% or higher uptime.</p>
+
+<p>The primary availability metric is expressed as A = Uptime / (Uptime + Downtime), often calculated over specific time periods such as monthly or annually. This can also be formulated as $A = MTBF / (MTBF + MTTR)$, linking availability directly to reliability and maintainability characteristics. Service Level Agreements (SLAs) commonly specify availability targets using “nines” notation: 99% (8.76 hours downtime/year), 99.9% (8.76 minutes downtime/month), 99.99% (52.56 minutes downtime/year), and 99.999% (5.26 minutes downtime/year).</p>
+
+<p>Instantaneous availability $A(t)$ measures system readiness at a specific time, while steady-state availability $A_\infty$ represents long-term system behavior. For repairable systems, the relationship $A_\infty = μ / (λ + μ)$ applies, where $λ$ is the failure rate and $μ$ is the repair rate. Mission availability focuses on system readiness during specific operational periods, calculated as the probability that the system is operational at mission start and remains operational throughout the mission duration.</p>
+
+<p>The achievement of high availability requires comprehensive system design that addresses both planned and unplanned downtime. Planned downtime includes scheduled maintenance, software updates, and system upgrades, while unplanned downtime results from component failures, security incidents, or environmental factors. For instance, cloud computing platforms like Amazon Web Services implement multiple availability zones with automated failover mechanisms to ensure continuous service availability even when individual data centers experience outages.</p>
+
+<p>Availability engineering involves the implementation of redundancy strategies, fault detection mechanisms, and rapid recovery procedures. These approaches include hot standby systems, load balancing, and distributed architectures that can maintain service continuity despite individual component failures. The design of highly available systems also considers human factors, ensuring that maintenance procedures can be performed efficiently without compromising system operation.</p>
+
+<h3 id="safety">Safety</h3>
+
+<p>Safety encompasses the system’s ability to avoid causing harm to people, property, or the environment during operation. This attribute is particularly critical in systems that directly interact with physical processes or control hazardous operations. Safety requirements often drive fundamental design decisions and impose constraints on system behavior that may not be necessary for purely functional considerations.</p>
+
+<p>Safety assessment employs several quantitative frameworks to measure and validate system safety performance. The Safety Integrity Level (SIL) classification defines four discrete levels (SIL 1-4) based on the probability of failure on demand, ranging from $10^{-1}$ to $10^{-2}$ for SIL 1 up to $10^{-4}$ to $10^{-5}$ for SIL 4. The Probability of Failure on Demand (PFD) quantifies the likelihood that a safety system will fail to perform its intended function when required, calculated as $PFD = λ × T / 2$ for low-demand mode systems$, where λ is the dangerous failure rate and T is the test interval.</p>
+
+<p>Risk assessment combines probability and consequence through the relationship Risk = Probability × Consequence, often expressed in units such as fatalities per year or monetary loss per operating period. The As Low As Reasonably Practicable (ALARP) principle provides a framework for determining acceptable risk levels by comparing risk reduction costs against potential benefits. Hazard rate analysis employs $λ(t)$ to quantify the instantaneous probability of hazardous events, while the cumulative hazard function $H(t) = \intλ(τ)dτ$ represents the total accumulated hazard over time.</p>
+
+<p>Safety-critical systems employ multiple layers of protection to prevent hazardous situations<sup id="fnref:18"><a href="#fn:18" class="footnote" rel="footnote" role="doc-noteref">18</a></sup>. These layers include inherent safety features built into the basic system design, protective systems that monitor for dangerous conditions, and procedural safeguards that guide human operators. The nuclear power industry exemplifies comprehensive safety engineering, with reactor designs incorporating multiple independent safety systems, containment structures, and emergency response procedures <sup id="fnref:19"><a href="#fn:19" class="footnote" rel="footnote" role="doc-noteref">19</a></sup>.</p>
+
+<p>The assessment of safety involves hazard analysis techniques that systematically identify potential sources of harm and evaluate their likelihood and consequences. Methods such as Hazard and Operability Studies (HAZOP) and Failure Mode and Effects Analysis (FMEA) provide structured approaches for safety evaluation. Safety standards such as IEC 61508 for functional safety provide frameworks for achieving appropriate safety levels across different application domains.</p>
+
+<h3 id="security">Security</h3>
+
+<p>Security addresses the system’s ability to protect against unauthorized access, data breaches, and malicious attacks. This attribute has gained increasing importance as systems become more interconnected and face evolving cyber threats. Security encompasses multiple dimensions including confidentiality, integrity, authentication, and authorization.</p>
+
+<p>Security measurement employs various quantitative frameworks to assess protection effectiveness and risk exposure. Mean Time To Compromise (MTTC) measures the expected time required for an attacker to successfully breach system defenses, while Mean Time To Detection (MTTD) quantifies the average time between security incident occurrence and identification. The Security Return on Investment (ROI) calculation evaluates security measure effectiveness through ROI = (Risk Reduction - Security Investment Cost) / Security Investment Cost.</p>
+
+<p>Attack Surface Quantification measures the total exposure points available to potential attackers, including network interfaces, software vulnerabilities, and human interaction points. The Common Vulnerability Scoring System (CVSS) provides standardized risk assessment with scores ranging from 0.0 to 10.0, incorporating base metrics (exploitability and impact), temporal metrics (exploit availability and remediation status), and environmental metrics (system-specific factors). Penetration testing metrics include coverage percentages, vulnerability discovery rates, and time-to-exploit measurements.</p>
+
+<p>Risk assessment frameworks employ quantitative models such as Annualized Loss Expectancy (ALE) = Annual Rate of Occurrence × Single Loss Expectancy, enabling cost-benefit analysis of security investments. Security Information and Event Management (SIEM) systems provide real-time quantitative monitoring through metrics such as alert generation rates, false positive percentages, and incident response times.</p>
+
+<p>Modern security approaches recognize that threats evolve continuously, requiring adaptive defense strategies rather than static protection mechanisms. For example, financial institutions implement multiple security layers including encryption, multi-factor authentication, behavioral analysis, and real-time fraud detection. These systems must balance security requirements with usability considerations, ensuring that legitimate users can access services efficiently while preventing unauthorized access.</p>
+
+<p>The implementation of security measures involves both technical and procedural components. Technical measures include cryptographic protocols, access control mechanisms, and intrusion detection systems. Procedural measures encompass security policies, training programs, and incident response procedures. Security architecture also considers the principle of defense in depth, implementing multiple independent security controls to provide comprehensive protection.</p>
+
+<h3 id="maintainability">Maintainability</h3>
+
+<p>Maintainability represents the ease with which a system can be modified, repaired, or enhanced throughout its operational lifetime. This attribute directly affects both availability and total cost of ownership, as systems with poor maintainability require more time and resources for upkeep. Maintainability considerations influence system architecture, documentation practices, and operational procedures.</p>
+
+<p>Maintainability assessment employs several quantitative measures to evaluate system maintenance characteristics. Mean Time To Repair (MTTR) remains the primary metric, representing the average time required to restore system functionality after failure detection. This encompasses troubleshooting time, repair execution, and verification activities. Mean Time To Restore Service (MTTRS) extends MTTR to include all activities required for complete service restoration, including coordination and communication overhead.</p>
+
+<p>The Maintainability Index (MI) provides a composite metric combining code complexity, code volume, and documentation quality, typically calculated as MI = 171 - 5.2 × ln(Halstead Volume) - 0.23 × Cyclomatic Complexity - 16.2 × ln(Lines of Code) + 50 × sin(sqrt(2.4 × Percent Comments)). Repair Rate μ = 1/MTTR quantifies the frequency of successful repairs, while Maintenance Downtime Ratio = Total Maintenance Time / Total Operating Time measures the proportion of time dedicated to maintenance activities.</p>
+
+<p>Corrective Maintenance Time includes failure detection, fault isolation, component replacement, and system verification phases. Preventive Maintenance Efficiency = (Failures Prevented / Maintenance Actions) × 100 measures the effectiveness of proactive maintenance strategies. Change Impact Analysis quantifies the ripple effects of modifications through metrics such as coupling coefficients and module dependency measures.</p>
+
+<p>Effective maintainability design incorporates modular architectures that allow individual components to be modified or replaced without affecting the entire system. Software maintainability benefits from clear code structure, comprehensive documentation, and automated testing frameworks. For instance, modern software development practices such as microservices architecture and containerization facilitate maintainability by enabling independent deployment and scaling of system components.</p>
+
+<p>The assessment of maintainability involves these quantitative frameworks that enable teams to optimize maintenance procedures and resource allocation. Design practices that enhance maintainability include standardized interfaces, diagnostic capabilities, and remote monitoring systems that enable proactive maintenance approaches.</p>
+
+<h2 id="how-ai-challenges-traditional-dependability">How AI Challenges Traditional Dependability</h2>
+
+<h3 id="complexity-and-opacity-of-ai-systems">Complexity and Opacity of AI Systems</h3>
+
+<p>Artificial intelligence systems introduce unprecedented levels of complexity that fundamentally challenge traditional dependability approaches. Unlike conventional software systems where behavior can be traced through explicit code paths, AI systems, particularly those based on machine learning, exhibit emergent behaviors that arise from complex interactions between data, algorithms, and learned representations. This opacity makes it extremely difficult to predict, verify, or explain system behavior using conventional analysis techniques.</p>
+
+<p>Deep neural networks exemplify this challenge, often containing millions or billions of parameters whose individual contributions to system behavior remain largely incomprehensible<sup id="fnref:20"><a href="#fn:20" class="footnote" rel="footnote" role="doc-noteref">20</a></sup>. When a deep learning system makes a classification error or produces an unexpected output, tracing the root cause through the network’s layers and connections proves extraordinarily difficult. This opacity severely hampers traditional debugging and verification approaches that rely on understanding causal relationships between inputs and outputs<sup id="fnref:21"><a href="#fn:21" class="footnote" rel="footnote" role="doc-noteref">21</a></sup>.</p>
+
+<p>The complexity extends beyond individual AI components to the integration of AI systems with traditional software and hardware components. AI systems often operate as components within larger systems, creating hybrid architectures where deterministic and non-deterministic behaviors interact in unpredictable ways. For instance, an autonomous vehicle’s AI perception system may incorrectly classify a road sign, leading to inappropriate actions by the deterministic control systems that rely on this perception data.</p>
+
+<p>This complexity also manifests in the temporal dimension, as AI systems often adapt and change their behavior over time through continued learning or parameter updates. Unlike static software systems whose behavior remains consistent across deployments, AI systems may exhibit different behaviors in different environments or at different times, making traditional reliability analysis techniques inadequate for capturing their true operational characteristics.</p>
+
+<h4 id="impact-on-reliability">Impact on Reliability</h4>
+
+<p>The opacity of AI systems creates fundamental challenges for reliability assessment and improvement. Traditional reliability analysis assumes that system failures result from hardware degradation or software bugs that can be identified and corrected through conventional debugging approaches. However, AI system failures often emerge from complex interactions between learned behaviors and operational conditions that were not adequately represented during training.</p>
+
+<p>Traditional reliability metrics require significant adaptation when applied to AI systems due to their probabilistic nature and data dependency. The classical reliability function $R(t) = e^{-λt}$ assumes constant failure rates, but AI systems exhibit time-varying failure rates that depend on environmental conditions, data distribution shifts, and model degradation. A modified AI reliability function takes the form $R_{AI}(t,D(t)) = P(\text{correct output} | \text{input distribution } D(t), \text{time } t)$, explicitly incorporating the input data distribution $D(t)$ as a parameter.</p>
+
+<p>The concept of graceful degradation takes on new dimensions in AI systems, where performance can deteriorate gradually and imperceptibly as operating conditions drift away from training scenarios. Unlike traditional systems that typically exhibit clear failure modes, AI systems may continue producing outputs even when their reliability has been severely compromised. This creates challenges for detecting and responding to reliability issues before they lead to system-level failures.</p>
+
+<h4 id="impact-on-safety">Impact on Safety</h4>
+
+<p>Safety assurance for AI systems requires fundamental changes to traditional safety engineering approaches, as the non-deterministic nature of AI behavior makes it extremely difficult to provide the level of safety guarantees that critical applications require. Traditional safety analysis relies on comprehensive hazard identification and the implementation of protective measures that can prevent hazardous system states. However, the opacity and complexity of AI systems make it nearly impossible to identify all potential hazardous behaviors through conventional analysis techniques.</p>
+
+<p>The concept of safe operation becomes significantly more complex when AI systems can exhibit unexpected behaviors that were not anticipated during design. Traditional safety systems rely on well-defined operating envelopes and fail-safe mechanisms that activate when systems operate outside acceptable parameters. AI systems may produce outputs that fall within expected ranges while still representing unsafe system states, making it difficult to implement effective protective measures.</p>
+
+<h4 id="impact-on-maintainability">Impact on Maintainability</h4>
+
+<p>The maintainability of AI systems presents unique challenges that stem from the complexity of the AI development and deployment pipeline. Unlike traditional software systems where maintenance typically involves modifying source code and testing changes, AI system maintenance may require retraining models, updating datasets, modifying algorithms, or adjusting hyperparameters. Each of these activities can have far-reaching effects on system behavior that are difficult to predict and validate.</p>
+
+<p>Documentation and knowledge management for AI systems must capture not only system architecture and interfaces but also the rationale behind data selection, model architecture choices, training procedures, and performance trade-offs. This documentation is essential for effective maintenance but is often incomplete or outdated due to the experimental nature of AI development and the complexity of capturing tacit knowledge about AI system behavior.</p>
+
+<h3 id="data-dependency-and-distribution-shifts">Data Dependency and Distribution Shifts</h3>
+
+<p>AI systems exhibit extreme sensitivity to the characteristics of their input data, creating new categories of dependability challenges that do not exist in traditional systems. The performance and reliability of AI systems depend critically on the assumption that operational data will closely match the training data used to develop the system. When this assumption fails, which occurs frequently in real-world deployments, system behavior can degrade dramatically and unpredictably.</p>
+
+<p>Distribution shift represents one of the most significant challenges to AI system dependability<sup id="fnref:22"><a href="#fn:22" class="footnote" rel="footnote" role="doc-noteref">22</a></sup>. This phenomenon occurs when the statistical properties of operational data differ from those of training data, causing AI systems to make incorrect predictions or decisions. For example, an image recognition system trained primarily on images from sunny conditions may perform poorly in rain, fog, or snow, even though the fundamental objects being recognized remain the same. The system’s confidence levels may not appropriately reflect this degraded performance, leading to overconfident incorrect decisions<sup id="fnref:23"><a href="#fn:23" class="footnote" rel="footnote" role="doc-noteref">23</a></sup>.</p>
+
+<p>The data dependency also creates new vulnerability vectors that can be exploited maliciously. Adversarial attacks demonstrate how small, carefully crafted perturbations to input data can cause AI systems to make dramatically incorrect decisions while remaining undetectable to human observers<sup id="fnref:24"><a href="#fn:24" class="footnote" rel="footnote" role="doc-noteref">24</a></sup>. These attacks highlight fundamental limitations in current AI approaches and create security challenges that extend far beyond traditional cybersecurity concerns<sup id="fnref:25"><a href="#fn:25" class="footnote" rel="footnote" role="doc-noteref">25</a></sup>.</p>
+
+<p>Data quality issues compound these challenges, as AI systems often cannot distinguish between valid inputs and corrupted, incomplete, or deliberately manipulated data. Traditional systems typically include explicit input validation and error handling mechanisms, but AI systems may process invalid inputs without recognizing the problem, potentially leading to incorrect outputs that appear reasonable on the surface.</p>
+
+<h4 id="impact-on-reliability-1">Impact on Reliability</h4>
+
+<p>Model drift represents a particularly insidious reliability challenge, where AI system performance degrades over time as the statistical properties of operational data change. This phenomenon can occur even when the underlying system components remain unchanged, making it difficult to distinguish between reliability issues and natural adaptation requirements. Detecting and addressing model drift requires continuous monitoring and potentially frequent retraining, adding complexity to traditional reliability maintenance practices.</p>
+
+<p>Prediction stability serves as an AI-specific reliability metric, measuring the consistency of model outputs across similar inputs. This can be quantified as $\text{Stability}(M,x,ε) = P(\mid M(x) - M(x’)\mid &lt; δ) \text{ for } \mid\mid x - x’\mid\mid &lt; ε$, where $M$ represents the model, $x$ is the input, and $δ$ defines the acceptable prediction variance. Model drift detection employs statistical measures such as the Kolmogorov-Smirnov test to identify distribution shifts that may compromise reliability.</p>
+
+<h4 id="impact-on-security">Impact on Security</h4>
+
+<p>Data poisoning attacks target the training process of AI systems, introducing malicious examples into training datasets that cause AI systems to learn incorrect behaviors. These attacks can be extremely subtle, involving small modifications to training data that do not significantly affect overall system performance but create specific vulnerabilities that can be exploited during operation. Detecting and preventing data poisoning requires new security approaches that can identify malicious training examples and assess their impact on learned behaviors.</p>
+
+<p>Adversarial attacks represent a fundamentally new category of security threat where carefully crafted inputs can cause AI systems to make incorrect decisions while appearing normal to human observers. These attacks exploit the statistical nature of AI learning algorithms and can be designed to be highly effective while remaining undetectable through conventional security monitoring approaches.</p>
+
+<h3 id="non-deterministic-behavior-and-probabilistic-outputs">Non-Deterministic Behavior and Probabilistic Outputs</h3>
+
+<p>The inherently probabilistic nature of AI systems creates fundamental challenges for dependability assessment and assurance. Unlike traditional deterministic systems where identical inputs always produce identical outputs, AI systems often incorporate randomness at multiple levels, from training procedures to inference mechanisms. This non-determinism makes it extremely difficult to achieve the predictable, repeatable behavior that traditional dependability approaches require.</p>
+
+<p>Many AI systems produce outputs in the form of probability distributions rather than definitive answers, requiring downstream systems to interpret and act upon uncertain information. This probabilistic nature introduces new failure modes where the system may be technically functioning correctly while still producing operationally unacceptable results. For instance, a medical diagnostic AI system might assign equal probabilities to two different diagnoses, leaving healthcare providers without clear guidance for treatment decisions.</p>
+
+<p>The temporal aspects of non-deterministic behavior create additional complications for system dependability. AI systems that incorporate reinforcement learning or online adaptation may exhibit different behaviors over time, even when processing identical inputs. This behavioral drift can occur gradually, making it difficult to detect through conventional monitoring approaches that focus on immediate system outputs rather than long-term behavioral trends.</p>
+
+<p>The interaction between multiple AI components with non-deterministic behaviors can lead to emergent system behaviors that are extremely difficult to predict or control. When multiple AI systems interact within a larger system architecture, their individual uncertainties can compound in complex ways, potentially leading to system-level behaviors that violate safety or performance requirements despite each individual component operating within acceptable parameters.</p>
+
+<h4 id="impact-on-availability">Impact on Availability</h4>
+
+<p>The availability requirements of AI systems extend beyond traditional uptime metrics to include performance availability, where systems must maintain acceptable performance levels rather than merely remaining operational. AI systems may continue running while producing degraded outputs, creating scenarios where technical availability differs significantly from functional availability. This distinction requires new metrics and monitoring approaches that consider both system operation and output quality.</p>
+
+<p>Functional availability $A_{\text{functional}} = \frac{\text{Time acceptable performance}}{\text{Total time}}$ provides a more meaningful measure than simple uptime for AI systems, where “acceptable performance” is defined by domain-specific accuracy thresholds. AI-specific availability metrics include Model Availability = $\frac{\text{Time model active}}{\text{Total time}} \times \text{Performance factor}$, where Performance factor = $\frac{\text{Current accuracy}}{\text{Baseline accuracy}}$ accounts for degraded performance states.</p>
+
+<h4 id="impact-on-safety-1">Impact on Safety</h4>
+
+<p>Traditional safety metrics require substantial modification to address the probabilistic and context-dependent nature of AI system behavior. The classical Safety Integrity Level (SIL) framework must be extended to accommodate AI uncertainty through Probabilistic Safety Integrity Levels (PSIL), where PSIL = $P(\text{Safe operation} \mid \text{Input uncertainty, Model uncertainty, Environmental conditions})$. This formulation explicitly incorporates multiple sources of uncertainty that affect AI system safety performance.</p>
+
+<p>Behavioral safety bounds employ statistical guarantees such as Probably Approximately Correct (PAC) learning theory to establish confidence intervals around safety-critical predictions. These bounds take the form $P(\mid \text{Safety metric actual} - \text{Safety metric predicted}\mid &lt; ε) ≥ 1 - δ$, providing statistical assurance about safety performance.</p>
+
+<h3 id="training-and-validation-challenges">Training and Validation Challenges</h3>
+
+<p>The development process for AI systems introduces dependability challenges that begin long before deployment and continue throughout the system’s operational lifetime. Traditional software verification approaches rely on comprehensive testing against well-defined specifications, but AI systems often lack precise specifications and exhibit behaviors that emerge from training data rather than explicit programming. This fundamental difference requires new approaches to validation and verification that current dependability practices are not equipped to handle.</p>
+
+<p>The training process itself introduces numerous sources of uncertainty and potential failure. Training data may contain biases, errors, or gaps that lead to AI systems that perform well on training metrics but fail in operational environments. The stochastic nature of most training algorithms means that identical training procedures can produce AI systems with different behaviors, making it difficult to reproduce and verify system performance across different development cycles.</p>
+
+<p>Validation of AI systems requires extensive testing across diverse scenarios and conditions, but the space of possible inputs and operating conditions is typically vast and difficult to characterize comprehensively. Traditional software testing approaches such as code coverage analysis have limited applicability to AI systems, where the “code” consists of learned parameters rather than explicit instructions. New testing methodologies must address the challenge of ensuring adequate coverage across the high-dimensional input spaces that AI systems operate within.</p>
+
+<p>The ongoing nature of AI system development creates additional validation challenges, as systems may be updated with new training data or modified algorithms throughout their operational lifetime. Each update potentially changes system behavior in subtle ways that may not be apparent through limited testing, requiring continuous validation approaches that can detect behavioral changes and assess their impact on system dependability.</p>
+
+<h4 id="impact-on-all-dependability-aspects">Impact on All Dependability Aspects</h4>
+
+<p>Training and validation challenges affect all aspects of system dependability simultaneously. For reliability, the inability to comprehensively test AI systems across all possible operating conditions creates uncertainty about system performance in edge cases. Statistical validation of AI system reliability requires extensive operational data that may take months or years to collect, unlike traditional reliability engineering which relies on accelerated testing and failure mode analysis.</p>
+
+<p>For safety, verification and validation of safety properties in AI systems requires new approaches that can address the probabilistic nature of AI outputs and the complexity of learned behaviors. Traditional safety standards such as DO-178C for aviation software assume deterministic system behavior that can be verified through comprehensive testing and analysis. These approaches are inadequate for AI systems whose behavior emerges from training data and may change over time through continued learning.</p>
+
+<p>For maintainability, testing and validation of AI system modifications require comprehensive approaches that can assess not only functional correctness but also performance impacts, bias implications, and behavioral changes across diverse operating conditions. Traditional software testing approaches such as unit testing and integration testing have limited applicability to AI systems, requiring new testing methodologies that can effectively validate AI system modifications.</p>
+
+<h3 id="integration-complexity-in-system-architectures">Integration Complexity in System Architectures</h3>
+
+<p>The integration of AI components into larger system architectures creates new categories of dependability challenges that arise from the interaction between AI systems and traditional system components. AI systems often operate as black boxes within larger systems, making it difficult to understand how their outputs will affect overall system behavior. This integration complexity is particularly problematic in safety-critical applications where the consequences of system failures can be severe.</p>
+
+<p>Interface design between AI and non-AI components requires careful consideration of uncertainty propagation and error handling mechanisms. Traditional system components are typically designed to handle well-defined error conditions, but AI systems can produce outputs that fall outside expected ranges or violate implicit assumptions about system behavior. For example, an AI-based sensor fusion system might produce location estimates with confidence intervals that vary dramatically based on environmental conditions, requiring navigation systems to adapt their behavior accordingly.</p>
+
+<p>The timing characteristics of AI systems often differ significantly from traditional real-time systems, creating challenges for integration into time-critical applications. AI inference can exhibit variable execution times depending on input complexity or system load, making it difficult to guarantee real-time response requirements. Additionally, AI systems may require periodic retraining or model updates that can temporarily affect system performance or availability.</p>
+
+<p>Version control and configuration management become significantly more complex when AI components are involved, as the behavior of AI systems depends not only on software code but also on training data, model architectures, hyperparameters, and training procedures. Ensuring reproducible system behavior across different deployments requires careful management of all these factors, which traditional configuration management approaches may not adequately address.</p>
+
+<h4 id="impact-on-availability-1">Impact on Availability</h4>
+
+<p>Maintenance of AI systems involves complex procedures that can significantly impact availability. Model retraining, data updates, and algorithm modifications often require extended downtime or may introduce temporary performance degradation as new models are validated and deployed. Unlike traditional software updates that can often be applied quickly with predictable effects, AI system updates may require extensive validation periods to ensure that new behaviors do not compromise system dependability.</p>
+
+<p>The distributed nature of many AI systems creates additional availability challenges, as system performance may depend on the coordinated operation of multiple AI components across different locations or platforms. Partial failures in distributed AI systems can lead to cascading performance degradation that is difficult to isolate and address. Traditional failover mechanisms may be inadequate when the failure involves subtle performance degradation rather than complete component failure.</p>
+
+<h4 id="impact-on-security-1">Impact on Security</h4>
+
+<p>The distributed nature of many AI systems creates additional security challenges, as attacks may target any component in the AI pipeline, from data collection and preprocessing to model training and inference. Securing AI systems requires comprehensive approaches that address vulnerabilities across the entire AI development and deployment lifecycle, including secure data handling, model training security, and secure inference mechanisms.</p>
+
+<p>Model extraction and inversion attacks pose threats to the intellectual property and privacy aspects of AI systems. Attackers may be able to reconstruct training data or extract model parameters through carefully designed queries, potentially revealing sensitive information or enabling the creation of unauthorized copies of proprietary AI systems. These threats require new security measures that can protect AI systems against inference-based attacks while maintaining acceptable system performance.</p>
+
+<h4 id="impact-on-maintainability-1">Impact on Maintainability</h4>
+
+<p>Version control for AI systems requires tracking not only source code changes but also data versions, model architectures, training procedures, and hyperparameter settings. The dependencies between these different components create complex versioning challenges where small changes in any component can lead to significant behavioral differences. Maintaining reproducible builds and deployments requires sophisticated tooling and processes that extend well beyond traditional software development practices.</p>
+
+<h2 id="development-directions-for-system-dependability">Development Directions for System Dependability</h2>
+
+<h3 id="explainable-ai-and-interpretability">Explainable AI and Interpretability</h3>
+
+<p>The development of explainable artificial intelligence represents one of the most critical directions for addressing AI-related dependability challenges. Current AI systems, particularly deep learning models, operate as black boxes that provide little insight into their decision-making processes. This opacity fundamentally undermines traditional approaches to dependability assurance that rely on understanding and validating system behavior through analysis and testing.</p>
+
+<p>Research in explainable AI focuses on developing techniques that can provide meaningful insights into AI system behavior without sacrificing performance or accuracy<sup id="fnref:28"><a href="#fn:28" class="footnote" rel="footnote" role="doc-noteref">26</a></sup>. These approaches include attention mechanisms that highlight which input features most strongly influence system outputs, gradient-based methods that identify critical input regions, and surrogate models that approximate complex AI behaviors with more interpretable alternatives. However, current explainability techniques often provide only partial insights into system behavior and may not capture the full complexity of AI decision-making processes<sup id="fnref:29"><a href="#fn:29" class="footnote" rel="footnote" role="doc-noteref">27</a></sup>.</p>
+
+<p>The development of inherently interpretable AI architectures represents a complementary approach that prioritizes transparency from the system design stage. These approaches may sacrifice some performance or flexibility in favor of providing clear explanations for system behavior. Examples include decision trees, linear models with feature importance, and rule-based systems that can provide explicit justifications for their outputs. The challenge lies in developing interpretable approaches that can handle the complexity and scale required for real-world applications.</p>
+
+<p>Standardization of explainability requirements and evaluation metrics represents another important development direction. Different stakeholders may require different types and levels of explanation, ranging from high-level summaries for business users to detailed technical analyses for system developers. Establishing common frameworks for explainability assessment will be essential for enabling meaningful comparisons between different AI systems and for supporting regulatory compliance in safety-critical applications.</p>
+
+<h3 id="formal-verification-and-mathematical-assurance">Formal Verification and Mathematical Assurance</h3>
+
+<p>The adaptation of formal verification techniques to AI systems represents a promising approach for providing mathematical guarantees about system behavior within specific operating conditions. Traditional formal verification relies on mathematical proofs that system implementations satisfy specified properties, but these approaches require precise system specifications and deterministic behavior that are often absent in AI systems.</p>
+
+<p>Recent research has begun developing formal verification approaches specifically designed for neural networks and other AI architectures<sup id="fnref:26"><a href="#fn:26" class="footnote" rel="footnote" role="doc-noteref">28</a></sup>. These techniques can provide guarantees about properties such as robustness to input perturbations, output bounds for given input ranges, and invariance properties that must be maintained across different operating conditions. However, current formal verification approaches for AI systems are typically limited to relatively simple networks and properties, and scaling these techniques to complex real-world systems remains a significant challenge<sup id="fnref:27"><a href="#fn:27" class="footnote" rel="footnote" role="doc-noteref">29</a></sup>.</p>
+
+<p>Abstract interpretation and symbolic execution techniques offer complementary approaches for analyzing AI system behavior without requiring complete formal specifications. These methods can provide insights into system behavior across ranges of inputs and can identify potential failure modes or unexpected behaviors. The development of AI-specific abstract interpretation techniques could provide valuable tools for dependability analysis without requiring the full rigor of formal verification.</p>
+
+<p>The integration of formal methods with AI development processes requires new tooling and methodologies that can support verification activities throughout the AI system lifecycle. This includes verification of training procedures, validation of learned models, and ongoing monitoring of deployed systems to ensure continued compliance with verified properties. Developing practical formal verification workflows for AI systems will be essential for enabling widespread adoption of these techniques.</p>
+
+<h3 id="robust-ai-architectures-and-design-patterns">Robust AI Architectures and Design Patterns</h3>
+
+<p>The development of AI architectures specifically designed for dependability represents a fundamental shift from the current focus on maximizing performance metrics such as accuracy or efficiency. Robust AI architectures incorporate design principles that prioritize predictable behavior, graceful degradation, and resilience to various types of failures and attacks. These architectures may trade some performance for improved dependability characteristics.</p>
+
+<p>Ensemble methods represent one approach to improving AI system robustness by combining predictions from multiple independent models. These approaches can provide improved reliability through diversity, as the likelihood of multiple models failing in the same way is typically lower than the failure probability of individual models. Advanced ensemble techniques include methods for dynamically selecting ensemble members based on input characteristics and approaches for combining predictions that account for model uncertainty and confidence levels.</p>
+
+<p>Defensive AI architectures incorporate explicit mechanisms for detecting and responding to adversarial inputs, distribution shifts, and other anomalous conditions. These architectures may include input validation components that can identify potentially problematic inputs, uncertainty quantification mechanisms that can assess the reliability of system outputs, and fallback systems that can provide alternative responses when primary AI systems are operating outside their reliable operating envelope.</p>
+
+<p>Modular AI architectures that decompose complex AI functionality into smaller, more manageable components can improve maintainability and facilitate validation efforts. These architectures may incorporate explicit interfaces between AI and non-AI components, standardized protocols for uncertainty propagation, and hierarchical control structures that can provide oversight and intervention capabilities for AI system operation.</p>
+
+<h3 id="continuous-monitoring-and-adaptive-systems">Continuous Monitoring and Adaptive Systems</h3>
+
+<p>The development of comprehensive monitoring systems for AI applications represents a critical capability for maintaining dependability throughout system operation. Traditional system monitoring focuses primarily on resource utilization, response times, and error rates, but AI systems require additional monitoring capabilities that can assess output quality, detect behavioral changes, and identify potential security threats.</p>
+
+<p>Performance monitoring for AI systems must address the multi-dimensional nature of AI system performance, including accuracy metrics, fairness assessments, robustness evaluations, and uncertainty quantification. These monitoring systems must be capable of operating in real-time while processing the high-volume, high-dimensional data streams that AI systems typically generate. Advanced monitoring approaches may incorporate statistical process control techniques, anomaly detection algorithms, and trend analysis capabilities specifically designed for AI system characteristics.</p>
+
+<p>Adaptive response systems that can automatically adjust AI system behavior based on monitoring feedback represent an important direction for maintaining dependability in dynamic operating environments. These systems may include mechanisms for switching between different AI models based on operating conditions, adjusting system parameters to maintain performance levels, or triggering human intervention when automated responses are insufficient.</p>
+
+<p>The integration of monitoring and adaptation capabilities with existing system management infrastructure requires careful consideration of interface standards, data formats, and control protocols. Developing standardized approaches for AI system monitoring and control will be essential for enabling interoperability between different AI systems and for supporting systematic dependability management across complex system architectures.</p>
+
+<h3 id="regulatory-frameworks-and-standards-development">Regulatory Frameworks and Standards Development</h3>
+
+<p>The establishment of comprehensive regulatory frameworks for AI system dependability represents a critical requirement for enabling the safe deployment of AI technologies in critical applications. Current regulatory approaches are often inadequate for addressing the unique characteristics of AI systems, as they were developed for traditional deterministic systems with well-defined failure modes and predictable behaviors.</p>
+
+<p>Standards development for AI system dependability must address the entire AI system lifecycle, from data collection and preparation through model development, validation, deployment, and ongoing operation. These standards must provide guidance for managing the unique risks associated with AI systems while enabling innovation and development in AI technologies. International coordination will be essential for developing standards that can support global deployment of AI systems.</p>
+
+<p>Certification processes for AI systems require new approaches that can address the probabilistic nature of AI behavior and the complexity of AI system validation. Traditional certification processes rely on comprehensive testing and analysis that may not be feasible for complex AI systems. New certification approaches may need to incorporate statistical validation methods, ongoing monitoring requirements, and periodic recertification to address the evolving nature of AI system behavior.</p>
+
+<p>Liability and responsibility frameworks for AI systems must address the challenges of assigning accountability when AI systems exhibit unexpected or harmful behaviors. These frameworks must consider the roles and responsibilities of data providers, algorithm developers, system integrators, and operators in ensuring AI system dependability. Clear liability frameworks will be essential for enabling insurance coverage and for providing appropriate incentives for dependable AI system development.</p>
+
+<h3 id="human-ai-collaboration-and-oversight">Human-AI Collaboration and Oversight</h3>
+
+<p>The development of effective human-AI collaboration frameworks represents a crucial direction for maintaining human oversight and control over AI systems, particularly in safety-critical applications. These frameworks must address the challenges of combining human judgment with AI capabilities while avoiding the pitfalls of over-reliance on either human or AI decision-making.</p>
+
+<p>Human-in-the-loop systems that incorporate human oversight at critical decision points can provide important safeguards for AI system operation. These systems must be designed to support effective human decision-making by providing appropriate information about AI system confidence, uncertainty, and reasoning. The design of human-AI interfaces must consider human cognitive limitations and decision-making biases that could compromise the effectiveness of human oversight.</p>
+
+<p>Training and education programs for AI system operators and users represent essential components of dependable AI system deployment. These programs must provide understanding not only of how to operate AI systems but also of their limitations, failure modes, and appropriate use cases. Effective training programs must be tailored to different user roles and must be updated regularly to reflect evolving AI technologies and best practices.</p>
+
+<p>Organizational frameworks for AI governance must establish clear roles, responsibilities, and decision-making processes for AI system development, deployment, and operation. These frameworks must address issues such as AI system risk management, ethical considerations, and compliance with regulatory requirements. Effective AI governance requires coordination between technical teams, business stakeholders, legal experts, and regulatory bodies.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>The integration of artificial intelligence into critical systems represents both unprecedented opportunities and fundamental challenges for system dependability. Traditional dependability frameworks, developed over decades of experience with deterministic systems, require substantial evolution to address the unique characteristics of AI technologies. The opacity, non-determinism, and emergent behaviors of AI systems challenge every aspect of traditional dependability approaches, from reliability analysis to safety assurance.</p>
+
+<p>The development of dependable AI systems requires coordinated advancement across multiple research and practice areas. Technical solutions such as explainable AI, formal verification, and robust architectures provide essential capabilities for understanding and controlling AI system behavior. However, these technical advances must be complemented by appropriate regulatory frameworks, standards development, and organizational practices that can support the responsible deployment of AI technologies.</p>
+
+<p>The path forward requires recognition that dependability in AI systems is not merely a technical challenge but a sociotechnical problem that involves complex interactions between technology, human operators, organizational processes, and societal expectations. Success in developing dependable AI systems will require unprecedented collaboration between researchers, practitioners, policymakers, and society as a whole to ensure that the benefits of AI technologies can be realized while maintaining the safety, security, and reliability that modern society requires.</p>
+
+<p>The future of system dependability in the AI era will likely involve hybrid approaches that combine the strengths of traditional dependability engineering with new techniques specifically designed for AI systems<sup id="fnref:30"><a href="#fn:30" class="footnote" rel="footnote" role="doc-noteref">30</a></sup>. These approaches must balance the competing demands of innovation and safety, efficiency and reliability, and automation and human control. The development of these balanced approaches represents one of the most important challenges facing the computing profession and society as a whole in the coming decades.</p>
+
+<h2 id="references">References</h2>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:Avizienis">
+      <p>Avizienis, A., Laprie, J. C., Randell, B., &amp; Landwehr, C. (2004). Basic concepts and taxonomy of dependable and secure computing. IEEE Transactions on Dependable and Secure Computing, 1(1), 11-33. <a href="#fnref:Avizienis" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>Amodei, D., Olah, C., Steinhardt, J., Christiano, P., Schulman, J., &amp; Mané, D. (2016). Concrete problems in AI safety. arXiv preprint arXiv:1606.06565. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:3">
+      <p>Russell, S., Dewey, D., &amp; Tegmark, M. (2015). Research priorities for robust and beneficial artificial intelligence. AI Magazine, 36(4), 105-114. <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:4">
+      <p>Varshney, K. R. (2016). Engißneering safety in machine learning. In Proceedings of the 2016 AAAI Workshop on AI for Social Good (pp. 1-5). <a href="#fnref:4" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:5">
+      <p>Brundage, M., Avin, S., Wang, J., Belfield, H., Krueger, G., Hadfield, G., … &amp; Maharaj, T. (2020). Toward trustworthy AI development: mechanisms for supporting verifiable claims. arXiv preprint arXiv:2004.07213. <a href="#fnref:5" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:6">
+      <p>Marcus, G. (2018). Deep learning: A critical appraisal. arXiv preprint arXiv:1801.00631. <a href="#fnref:6" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:7">
+      <p>Lapuschkin, S., Wäldchen, S., Binder, A., Montavon, G., Samek, W., &amp; Müller, K. R. (2019). Unmasking clever hans predictors and assessing what machines really learn. Nature Communications, 10(1), 1-8. <a href="#fnref:7" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:8">
+      <p>Batarseh, F. A., &amp; Yang, R. (2018). Federal data science: Transforming government and agricultural policy using artificial intelligence. Academic Press. <a href="#fnref:8" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:9">
+      <p>Wing, J. M. (2021). Trustworthy AI. Communications of the ACM, 64(10), 64-71. <a href="#fnref:9" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:10">
+      <p>Laprie, J. C. (1992). Dependability: Basic concepts and terminology. Springer-Verlag. <a href="#fnref:10" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:11">
+      <p>Bondavalli, A., Ceccarelli, A., &amp; Falai, L. (2007). Assuring resilient time synchronization. In 26th IEEE International Symposium on Reliable Distributed Systems (pp. 3-12). <a href="#fnref:11" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:12">
+      <p>Randell, B. (2000). Facing up to faults. The Computer Journal, 43(2), 95-106. <a href="#fnref:12" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:13">
+      <p>Neumann, P. G. (1995). Computer related risks. ACM Press/Addison-Wesley Publishing Co. <a href="#fnref:13" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:14">
+      <p>Leveson, N. (2011). Engineering a safer world: Systems thinking applied to safety. MIT Press. <a href="#fnref:14" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:15">
+      <p>Littlewood, B., &amp; Strigini, L. (2000). Software reliability and dependability: A roadmap. In Proceedings of the Conference on the Future of Software Engineering (pp. 175-188). <a href="#fnref:15" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:16">
+      <p>Trivedi, K. S. (2001). Probability and statistics with reliability, queuing, and computer science applications. John Wiley &amp; Sons. <a href="#fnref:16" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:17">
+      <p>Yeh, Y. C. (1996). Triple-triple redundant 777 primary flight computer. In 1996 IEEE Aerospace Applications Conference (Vol. 1, pp. 293-307). <a href="#fnref:17" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:18">
+      <p>Storey, N. (1996). Safety critical computer systems. Addison-Wesley Longman Publishing Co. <a href="#fnref:18" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:19">
+      <p>Dubrova, E. (2013). Fault-tolerant design: An introduction. Springer Science &amp; Business Media. <a href="#fnref:19" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:20">
+      <p>Szegedy, C., Zaremba, W., Sutskever, I., Bruna, J., Erhan, D., Goodfellow, I., &amp; Fergus, R. (2013). Intriguing properties of neural networks. arXiv preprint arXiv:1312.6199. <a href="#fnref:20" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:21">
+      <p>Gilpin, L. H., Bau, D., Yuan, B. Z., Bajwa, A., Specter, M., &amp; Kagal, L. (2018). Explaining explanations: An overview of interpretability of machine learning. In 2018 IEEE 5th International Conference on Data Science and Advanced Analytics (pp. 80-89). <a href="#fnref:21" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:22">
+      <p>Quionero-Candela, J., Sugiyama, M., Schwaighofer, A., &amp; Lawrence, N. D. (2008). Dataset shift in machine learning. MIT Press. <a href="#fnref:22" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:23">
+      <p>Ovadia, Y., Fertig, E., Ren, J., Nado, Z., Sculley, D., Nowozin, S., … &amp; Snoek, J. (2019). Can you trust your model’s uncertainty? Evaluating predictive uncertainty under dataset shift. In Advances in Neural Information Processing Systems (pp. 13991-14002). <a href="#fnref:23" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:24">
+      <p>Goodfellow, I. J., Shlens, J., &amp; Szegedy, C. (2014). Explaining and harnessing adversarial examples. arXiv preprint arXiv:1412.6572. <a href="#fnref:24" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:25">
+      <p>Carlini, N., &amp; Wagner, D. (2017). Towards evaluating the robustness of neural networks. In 2017 IEEE Symposium on Security and Privacy (pp. 39-57). <a href="#fnref:25" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:28">
+      <p>Adadi, A., &amp; Berrada, M. (2018). Peeking inside the black-box: A survey on explainable artificial intelligence (XAI). IEEE Access, 6, 52138-52160. <a href="#fnref:28" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:29">
+      <p>Rudin, C. (2019). Stop explaining black box machine learning models for high stakes decisions and use interpretable models instead. Nature Machine Intelligence, 1(5), 206-215. <a href="#fnref:29" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:26">
+      <p>Katz, G., Barrett, C., Dill, D. L., Julian, K., &amp; Kochenderfer, M. J. (2017). Reluplex: An efficient SMT solver for verifying deep neural networks. In International Conference on Computer Aided Verification (pp. 97-117). <a href="#fnref:26" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:27">
+      <p>Singh, G., Gehr, T., Püschel, M., &amp; Vechev, M. (2019). An abstract domain for certifying neural networks. Proceedings of the ACM on Programming Languages, 3(POPL), 1-30. <a href="#fnref:27" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:30">
+      <p>Doshi-Velez, F., &amp; Kim, B. (2017). Towards a rigorous science of interpretable machine learning. arXiv preprint arXiv:1702.08608. <a href="#fnref:30" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+
+		</article>
+
+	</div>
+
+</section>
+
+
+<!-- MathJax configuration and script -->
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+
+
+		</div>
+
+	</div>
+
+
+	<footer class="footer">
+
+	<div class="wrap">
+
+		<p class="footer__text">Welcome to get in contact.</p>
+
+		<div class="footer__copyright">
+			<span>© 2026 Qinglei Ji</span>
+		</div>
+
+		<ul class="socials"> 
+	
+	
+	<li class="socials__item">
+	  <a href="https://www.linkedin.com/in/qinglei-ji/" target="_blank" class="socials__item__link" title="Linkedin">
+		
+		
+		  <i class="fab fa-linkedin" aria-hidden="true"></i>
+		
+	  </a>
+	</li>
+	
+	
+	
+	<li class="socials__item">
+	  <a href="https://scholar.google.com/citations?user=5NlwkjEAAAAJ&hl=en" target="_blank" class="socials__item__link" title="Google scholar">
+		
+		
+		  <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+		
+	  </a>
+	</li>
+	
+	
+	
+	<li class="socials__item">
+	  <a href="https://www.researchgate.net/profile/Qinglei-Ji" target="_blank" class="socials__item__link" title="Researchgate">
+		
+		
+		  <i class="fab fa-researchgate" aria-hidden="true"></i>
+		
+	  </a>
+	</li>
+	
+	
+	
+	<li class="socials__item">
+	  <a href="https://github.com/QingleiJi" target="_blank" class="socials__item__link" title="Github">
+		
+		
+		  <i class="fab fa-github" aria-hidden="true"></i>
+		
+	  </a>
+	</li>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<li class="socials__item">
+	  <a href="https://www.youtube.com/@qingleiji5865/videos" target="_blank" class="socials__item__link" title="Youtube">
+		
+		
+		  <i class="fab fa-youtube" aria-hidden="true"></i>
+		
+	  </a>
+	</li>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+  </ul>
+  
+
+	</div>
+
+</footer>
+
+
+	<!-- Javascript Assets -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="/js/plugins-min.js"></script>
+	<script src="/js/personal-min.js"></script>
+
+	
+	<!-- Extra Footer JS Code -->
+	
+	
+
+
+</body>
+
+</html>

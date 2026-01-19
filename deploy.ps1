@@ -17,7 +17,7 @@ if (-not (Test-Path "Gemfile")) {
 # IMPORTANT: Define the target directory for deployment.
 # This is the local path to your GitHub Pages repository (e.g., your-username.github.io).
 # PLEASE UPDATE THIS PATH to your actual repository location.
-$targetDir = "C:\Users\Qingl\OneDrive\Projects\Github\qingleiji.github.io"
+$targetDir = "D:\Github\qingleiji.github.io"
 
 # Ensure the script exits on any error
 $ErrorActionPreference = "Stop"
