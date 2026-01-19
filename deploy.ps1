@@ -10,6 +10,22 @@ Clear-Host
 # Ensure the script runs from the directory where it is located (project root)
 Set-Location -Path $PSScriptRoot
 
+# Build the Tracker-PWA project
+Write-Host "Building Tracker-PWA project..."
+$trackerProjectDir = "..\Tracker-PWA"
+if (Test-Path -Path $trackerProjectDir) {
+    Push-Location $trackerProjectDir
+    Write-Host "Running 'npm run build' in $(Get-Location)..."
+    npm run build
+    if ($LASTEXITCODE -ne 0) {
+        throw "Tracker-PWA build failed."
+    }
+    Pop-Location
+    Write-Host "Tracker-PWA build complete."
+} else {
+    Write-Host "Warning: Tracker-PWA project directory not found at $trackerProjectDir. Skipping build."
+}
+
 # Copy the Tracker PWA build to the tracker folder
 Write-Host "Copying Tracker-PWA build..."
 $trackerSource = "..\Tracker-PWA\dist"
