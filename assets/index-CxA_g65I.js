@@ -131,7 +131,7 @@ I am most interested in AI when it has constraints: uncertainty, failure modes, 
 I like the part where systems engineering turns fuzziness into models, interfaces, and decisions other people can actually build on.
 `,qp=`**Parental leave:** Having fun with Oppy.
 
-**Building apps:** Building self-hosted apps to take journals, learn Swedish, take recordings, etc.
+**Developing:** Building self-hosted apps to take journals, learn Swedish, take recordings, etc.
 
 **Learning:** Taking courses in agentic AI.
 
@@ -139,7 +139,7 @@ I like the part where systems engineering turns fuzziness into models, interface
 
 Use [cat posts/reading-list](cmd: cat posts/reading-list) to open the list.
 `,Jp=`- [LinkedIn](https://www.linkedin.com/in/qinglei-ji/)
-- [Scholar](https://scholar.google.com/citations?user=TGE0f40AAAAJ)
+- [Scholar](https://scholar.google.com/citations?user=5NlwkjEAAAAJ&hl=en)
 - [ResearchGate](https://www.researchgate.net/profile/Qinglei-Ji)
 - [GitHub](https://github.com/QingleiJi)
 - [YouTube](https://www.youtube.com/@qingleiji)
